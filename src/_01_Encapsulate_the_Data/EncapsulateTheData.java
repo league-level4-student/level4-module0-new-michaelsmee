@@ -1,5 +1,8 @@
 package _01_Encapsulate_the_Data;
 
+import java.lang.reflect.Member;
+import java.util.Random;
+
 public class EncapsulateTheData {
 
 	// 1. Encapsulate all the members.
@@ -96,17 +99,21 @@ public class EncapsulateTheData {
 	 */
 
 	private Object memberObj;
+	private String parameter;
 	
 	
-	public void setMemberObj(String blankString) {
+	public void setMemberObj(Object randomObject) {
 		this.memberObj = new Object();
-		if() {
-			
+		if(memberObj instanceof Member) {
+			System.out.println(memberObj instanceof Member);
+		}
+		else {
+			System.out.println(memberObj instanceof Random);
 		}
 	}
 
 	public String getMemberObj() {
-		return this.blankString;
+		return this.parameter;
 	}
 
 	
