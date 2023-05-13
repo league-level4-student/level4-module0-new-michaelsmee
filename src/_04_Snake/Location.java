@@ -2,15 +2,16 @@ package _04_Snake;
 
 public class Location {
 
-	int xpos;
-	int ypos;
+	private int xpos;
+	private int ypos;
 	
 	public Location(int X, int Y) {
-
+		this.xpos = X;
+		this.ypos = Y;
 	}
 
-	public boolean equals(int x, int y) {
-		if(xpos == x && ypos == y) {
+	public boolean equals(Location location) {
+		if(xpos == location.getX() && ypos == location.getY()) {
 			return true;
 	}
 		else {
@@ -19,10 +20,13 @@ public class Location {
 	
 }
 	
-	enum Directions {
-		
-		LEFT, RIGHT, UP, DOWN;
-		
+	
+	
+	public int getX() {
+	return xpos;
 	}
 	
+	public int getY() {
+	return ypos;
+	}
 }
